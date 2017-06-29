@@ -54,7 +54,7 @@ public class MemberService {
 	public void setName(String name){
 		this.name = name;
 	}
-	public void setAge(String age){
+	public void setAge(){
 		this.age = age;
 	}
 	public void setLogin(){
