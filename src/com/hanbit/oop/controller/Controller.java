@@ -1,5 +1,7 @@
 package com.hanbit.oop.controller;
 import java.util.Scanner;
+
+import com.hanbit.oop.service.BmiService;
 import com.hanbit.oop.service.CalcService;
 import com.hanbit.oop.service.EvensumSerivece;
 import com.hanbit.oop.service.GradeSerivece;
@@ -13,7 +15,7 @@ import com.hanbit.oop.service.TimeService;
 public class Controller {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		CalcService s1 = new CalcService();
+		BmiService s1 = new BmiService();
 		EvensumSerivece s2 = new EvensumSerivece();
 		OodsumSerivece s3 = new OodsumSerivece();
 		GradeSerivece s4 = new GradeSerivece();
@@ -22,6 +24,7 @@ public class Controller {
 		TaxService s7 = new TaxService();
 		SsnSerivece s8 = new SsnSerivece();
 		TimeService s9 = new TimeService();
+		CalcService s10 = new CalcService();
 		
 		String result = "";
 
@@ -39,12 +42,13 @@ public class Controller {
 			case "1": 
 				System.out.print("(주의:키가 179cm일 경우 1.79로 표기)\n"+"Enter height : ");
 				double height = scan.nextDouble();
+				s1.setHeight(height);
 				System.out.print("Enter weight : ");
 				double weight = scan.nextDouble();
-				
-				result = s1.calcbmi(height, weight);
-				 
-				System.out.println(String.format("나의 체질량지수(BMI) : %s",result));
+				s1.setWeight(weight);
+				s1.setBmi();
+				s1.setCalc();
+				System.out.println(s1.getCalc());
 			break;
 			
 			case "2": 
@@ -62,18 +66,24 @@ public class Controller {
 			break;
 			
 			
-			case "4":  
-				System.out.print("이름을 입력하세요 : ");
+			case "4":
+				System.out.println("이름을 입력하세요 : ");
 				String name = scan.next();
+				s4.setName(name);
+				System.out.println("전공을 입력하세요 : ");
+				String major = scan.next();
+				s4.setMajor(major);
 				System.out.print("국어 점수 : ");
 				int kor = scan.nextInt();
+				s4.setKor(kor);
 				System.out.print("영어 점수 : ");
 				int eng = scan.nextInt();
+				s4.setEng(eng);
 				System.out.print("수학 점수 : ");
 				int math = scan.nextInt();
-				
-				result = s4.grade(name, kor, eng, math);
-				System.out.println(result);
+				s4.setMath(math);
+				s4.setGrade();
+				System.out.println(s4.toString());
 			break;
 			
 			case "5":  
@@ -116,10 +126,10 @@ public class Controller {
 			break;
 			case "10":
 				System.out.print("Enter First Number :");
-				int a = scan.nextInt(); 
+				String a = scan.next(); 
 				System.out.print("Enter Second Number :");
-				int c = scan.nextInt();
-				int puls= s1.calcPuls(a,c);
+				String b = scan.next();
+				int puls= s10.calcPuls(a,b);
 				System.out.println(puls);
 			break;
 				
