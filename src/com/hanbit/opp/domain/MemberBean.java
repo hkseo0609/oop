@@ -30,7 +30,7 @@ public class MemberBean {
 	}
 	
 	public String toString(){
-		return "로그인 성공! "+id;
+		return "id는 "+id+" 이름은 "+name+" 비밀번호는 "+pwd;
 	}
 
 

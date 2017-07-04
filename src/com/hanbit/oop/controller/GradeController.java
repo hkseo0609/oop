@@ -1,13 +1,15 @@
 package com.hanbit.oop.controller;
 
-import com.hanbit.oop.service.GradeSerivece;
+
+import com.hanbit.oop.service.GradeService;
+import com.hanbit.oop.serviceImpl.GradeServiceImpl;
 import com.hanbit.opp.domain.GradeBean;
 
 import javax.swing.*;
 
 public class GradeController {
 	public static void main(String[] args) {
-		GradeSerivece g1 = new GradeSerivece();
+		GradeService g1 = new GradeServiceImpl();
 		GradeBean gb = new GradeBean();
 		//stream 처리
 		while(true){

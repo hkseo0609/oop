@@ -1,4 +1,4 @@
-package com.hanbit.oop.service;
+package com.hanbit.oop.serviceImpl;
 public class LeapyearSerivece {
 	public String leapyear(int year){
 		/*연도를 4개로 나눈값이 0이라면 윤년일수 있다.

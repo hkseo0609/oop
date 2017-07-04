@@ -38,7 +38,7 @@ public class PhoneController {
 				JOptionPane.showMessageDialog(null, iPone.toString());
 			break;
 			case "4":
-				android.setName(JOptionPane.showInputDialog("상대방 이름을 입력하세요."));
+				android.setName(JOptionPane.showInputDialog("상대 방 이름을 입력하세요."));
 				android.setPhoneNo(JOptionPane.showInputDialog("상대방 전화번호를 입력하세요."));
 				android.setSize(JOptionPane.showInputDialog("핸드폰이 몇인치인지 입력하세요"));
 				android.setData(JOptionPane.showInputDialog("문자 내용을 입력하세요."));

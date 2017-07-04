@@ -1,4 +1,4 @@
-package com.hanbit.oop.service;
+package com.hanbit.oop.serviceImpl;
 public class LoginSerivece {
 	public static final String USER_ID="hee";
 	public static final String USER_PWD="1234";
